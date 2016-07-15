@@ -27,7 +27,7 @@
   </header>
   
   <div class="container">
-    <% if notice && alert %>
+    <% if notice || alert %>
     <p class="alert alert-success"><%= notice %></p>
     <p class="alert alert-danger"><%= alert %></p>
     <% end %>
