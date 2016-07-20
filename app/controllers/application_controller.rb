@@ -1,17 +1,17 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def after_sign_in_path_for(resource)
-    case resource
-    when user
-      events_path
-    when admin_user
-      new_admin_user_session_path
+    def after_sign_in_path_for(resource)
+      stored_location_for(resource) ||
+        if resource.is_a?(Admin)
+          admin_dashboard_path
+        else
+          user_path(resource)
+        end
     end
-  end
 
   def after_sign_out_path_for(resource)
-      events_path
+      root_path
   end
 
   include ApplicationHelper
