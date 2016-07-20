@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
-
-  devise_for :admin_users, :controllers => {
-      :registrations => 'admin_users/registrations',
-      :sessions => 'admin_users/sessions'
-    }
     
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :events
     
   devise_for :users
     
   devise_scope :admin_user do
-        get '/admin_users/sign_out' => 'devise/sessions#destroy'
+      get '/admin_users/sign_out' => 'devise/sessions#destroy'
   end
 
   resources :users, only: [:index, :show, :edit, :update] do

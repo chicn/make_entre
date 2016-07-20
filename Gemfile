@@ -11,6 +11,8 @@ gem 'jquery-slick-rails'
 gem 'flexslider'
 # 6/21　device
 gem 'devise', '3.5.1'
+
+gem 'activeadmin', github: 'activeadmin'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
