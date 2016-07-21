@@ -1,60 +1,3 @@
-/* 共通レイアウト ================================ */
-body {
-  padding-top: 70px;
-  color: #364a4d;
-}
-
-ul, li {
-  list-style-type: none;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #1f89e2;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #1b7ccd;
-}
-
-.container {
-  width: 900px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  clear: both;
-}
-
-.heading {
-  display: inline-block;
-}
-
-/* フォント
-================================ */
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 2em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  /*margin-bottom: 30px;*/
-  /*font-weight: normal;*/
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
 /* ヘッダー ================================ */
 .navbar {
   height: 65px;
@@ -118,29 +61,7 @@ p {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* フッター ================================ */
-footer {
-  margin-top: 100px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #848484;
-}
-
-footer small {
-  float: left;
-}
-
 /* ボタン ================================ */
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  font-size: 16px;
-  cursor: pointer;
-}
 
 .btn-large {
   padding: 6px 140px;
@@ -185,18 +106,6 @@ input, textarea, select {
   margin-top: 5px;
   margin-bottom: 25px;
   border-radius: 3px;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 6px 12px;
-  font-size: 16px;
-  line-height: 1.428571429;
-  color: #555555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
 }
 
 /*　エラーメッセージ　*/

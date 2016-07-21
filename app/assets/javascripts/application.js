@@ -12,17 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
-//= require bootstrap.min.js
-//= require jquery.fancybox.pack.js
-//= require jquery.flexslider-min.js
-//= require jquery.min.js
-//= require main.js
-//= require modernizr.js
-//= require retina.min.js
-//= require slick.min.js
-//= require slick.js
-//= require jquery.slick
 //= require_tree .
-
-

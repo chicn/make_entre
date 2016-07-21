@@ -1,14 +1,10 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Hirbいれてみよう！6/19
 gem 'hirb', '0.7.3'
-#6/24
-gem 'jquery-slick-rails'
-#6/24 flexslider
-gem 'flexslider'
+
 # 6/21　device
 gem 'devise', '3.5.1'
 
