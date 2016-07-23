@@ -44,19 +44,6 @@
 <!--<![endif]-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-<script>
-$("document").ready(function(){
- $('.single-item').slick({
-   infinite: true,
-   dots:true,
-   slidesToShow: 1,
-   slidesToScroll: 1,
-   autoplay: true,
-   autoplaySpeed: 2000,
-   centerPadding: '100px',
- });
-});
-</script>
   <!--  events text -->
   <div class="events">
 
@@ -64,14 +51,34 @@ $("document").ready(function(){
       <div class="col-md-10 col-md-offset-1">
         <div class="banner-text text-center">
           <h1>今月のイベント一覧</h1>
-          <div class="single-item">
-            <div class="photo" class="col-md-12"><a href="#"><%= image_tag "syaberi_ba.jpg" %></a></div>
-            <div class="photo" class="col-md-12"><a href="#"><%= image_tag "test.jpg" %></a></div>
-            <div class="photo" class="col-md-12"><a href="#"><%= image_tag "test.jpg" %></a></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide col-md-12 photo"><a href="#"><%= image_tag "syaberi_ba.jpg" %></a></div>
+              <div class="swiper-slide col-md-12 photo"><a href="#"><%= image_tag "test.jpg" %></a></div>
+              <div class="swiper-slide col-md-12 photo"><a href="#"><%= image_tag "test.jpg" %></a></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    </script>
 
     <!-- events text -->
     <!-- Page Features -->
@@ -97,7 +104,7 @@ $("document").ready(function(){
     <!-- /.row -->
 
     <!-- Testimonials section -->
-    <section id="testimonials" class="section testimonials no-padding">
+    <section id="testimonials" class="testimonials no-padding">
       <div class="container-fluid">
         <div class="row no-gutter">
           <div class="flexslider">
@@ -111,30 +118,6 @@ $("document").ready(function(){
                   </blockquote>
                 </div>
               </li>
-              <li>
-                <div class="col-md-12">
-                  <blockquote>
-                    <h1>今月のMVP賞 </h1>
-                    <p>みくちん、がんばったで賞</p>
-                  </blockquote>
-                </div>
-              </li>
-              <li>
-                <div class="col-md-12">
-                  <blockquote>
-                    <h1>今月のMVP賞 </h1>
-                    <p>しゃあ、赤い彗星で賞</p>
-                  </blockquote>
-                </div>
-              </li>
-              <li>
-                <div class="col-md-12">
-                  <blockquote>
-                    <h1>今月のMVP</h1>
-                    <p>角南めい、怒ったで賞</p>
-                  </blockquote>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
@@ -144,7 +127,7 @@ $("document").ready(function(){
 
     <!-- Footer section -->
     <footer class="footer">
-      <div class="footer-top section">
+      <div class="footer-top">
         <div class="container">
           <div class="row">
             <div class="footer-col col-md-6">

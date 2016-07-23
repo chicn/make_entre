@@ -8,6 +8,7 @@
   left: 0;
   position: fixed;
   margin-bottom: 20px;
+  z-index: 10;
 }
 
 #logo {
@@ -130,3 +131,7 @@ input, textarea, select {
 .alert-danger ul li {
   list-style-type: disc;
  }
+
+.adjust-container {
+  margin-top: 100px;
+}

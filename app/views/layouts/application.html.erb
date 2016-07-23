@@ -27,20 +27,24 @@
     </div>
   </header>
   
-    <% if notice %>
+  <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
+  <% end %>
+  <% if alert %>
     <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-    <%= yield %>
+  <% end %>
 
-  <div class="container">
-    <footer class="footer">
-      <div class="small">
-        &copy; 2015 Make Entre, Inc.
-      </div>
-    </footer>
-  </div>
+  <% if !current_page?(root_path) %><div class="adjust-container"></div><% end %>
+  <%= yield %>
+
+  <% if !current_page?(events_path) && !current_page?(root_path) %>
+    <div class="container">
+      <footer class="footer">
+        <div class="small">
+          &copy; 2015 Make Entre, Inc.
+        </div>
+      </footer>
+    </div>
+  <% end %>
 </body>
 </html>
