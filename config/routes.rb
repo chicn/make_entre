@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   post '/like/:note_id' => 'likes#like', as: 'like'
   delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
 
+  post '/participation/:event_id' => 'participations#participate', as: 'participate'
+  delete '/participation/:event_id' => 'participations#cancel', as: 'cancel'
+
   root 'toppage#index'
   get '/about' => 'home#about'
 end
