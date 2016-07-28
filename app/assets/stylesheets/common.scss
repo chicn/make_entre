@@ -110,6 +110,13 @@ input, textarea, select {
 }
 
 /*　エラーメッセージ　*/
+.alerts {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+
 .alert {
   margin-bottom: 20px;
   border-radius: 4px;
@@ -131,7 +138,3 @@ input, textarea, select {
 .alert-danger ul li {
   list-style-type: disc;
  }
-
-.adjust-container {
-  margin-top: 100px;
-}

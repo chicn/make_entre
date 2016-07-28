@@ -26,14 +26,15 @@
     </div>
   </header>
   
-  <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
+  <div class="alerts">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+  </div>
 
-  <% if !current_page?(root_path) %><div class="adjust-container"></div><% end %>
   <%= yield %>
 
   <% if !current_page?(events_path) && !current_page?(root_path) %>
