@@ -17,6 +17,9 @@
   </section>
 
   <%= link_to @user.likes.count, like_notes_user_path(@user.id) %>個の投稿にいいね！しています
+  <% if current_user.participations.find_by %>
+    <% current_user.participations.find_by %>に参加予定です
+  <% end %>
 
   <% if current_user?(@user) %>
     <section>

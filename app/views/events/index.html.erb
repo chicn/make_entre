@@ -93,7 +93,7 @@
               <h3><%= event.name %></h3>
               <p><%= event.place %><br>
                 <%= event.date %><br></p>
-              <p><a href="#" class="btn btn-primary">行く！</a> <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
+              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post %> <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
             </div>
           </div>
         </div>
