@@ -51,10 +51,9 @@ ActiveRecord::Schema.define(version: 20160727201858) do
     t.date     "date"
     t.string   "place"
     t.text     "content"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
-    t.integer  "admin_user_id"
     t.text     "main_image"
   end
 
@@ -93,7 +92,6 @@ ActiveRecord::Schema.define(version: 20160727201858) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "image"
-    t.integer  "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

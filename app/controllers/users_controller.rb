@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def show
     @notes = @user.notes
     @title = "投稿一覧"
+    @events = @user.participate_events
   end
 
   def edit
