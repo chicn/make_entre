@@ -12,7 +12,6 @@
       <div id="logo"><%= link_to "Make Entre", root_path %></div>
       <% if user_signed_in? %>
         <ul class="header-right">
-          <li><%= link_to "ユーザー一覧", users_path %></li>
           <li><%= link_to "イベント一覧", events_path %></li>
           <li><%= link_to current_user.email, current_user %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
