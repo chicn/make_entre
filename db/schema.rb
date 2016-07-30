@@ -51,9 +51,10 @@ ActiveRecord::Schema.define(version: 20160728164206) do
     t.date     "date"
     t.string   "place"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "user_id"
+    t.integer  "admin_user_id"
     t.text     "main_image"
   end
 
@@ -92,6 +93,7 @@ ActiveRecord::Schema.define(version: 20160728164206) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "image"
+    t.integer  "role"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
