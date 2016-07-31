@@ -88,12 +88,13 @@
                       
         <div class="col-md-3 col-sm-6 hero-feature">
           <div class="thumbnail">
-            <img src="images/syaberi_ba.jpg"  alt="">
+            <%= image_tag event.main_image, class: "index_main_img" %>
             <div class="caption">
               <h3><%= event.name %></h3>
               <p><%= event.place %><br>
                 <%= event.date %><br></p>
-              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post %> <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
+              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post %> 
+              <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
             </div>
           </div>
         </div>
