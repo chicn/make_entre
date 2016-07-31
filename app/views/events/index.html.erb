@@ -93,7 +93,7 @@
               <h3><%= event.name %></h3>
               <p><%= event.place %><br>
                 <%= event.date %><br></p>
-              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post %> 
+              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post, data: {confirm: "本当に参加しますか？"} %> 
               <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
             </div>
           </div>
