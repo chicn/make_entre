@@ -9,7 +9,9 @@
 <body>
   <header class="navbar">
     <div class="container">
-      <div id="logo"><%= link_to "Make Entre", root_path %></div>
+      <div id="logo">
+      <%= link_to image_tag('logo.png', { :border => '0', :alt => ''}), root_path %>
+      </div>
       <% if user_signed_in? %>
         <ul class="header-right">
           <li><%= link_to "イベント一覧", events_path %></li>
@@ -18,14 +20,16 @@
         </ul>
       <% else %>
         <ul class="header-right">
-          <li><%= link_to "概要", about_path %></li>
-          <li><%= link_to "新規登録", new_user_registration_path %></li>
+          <li><%= link_to "HOME", root_path %></li>
+          <li><%= link_to "登録", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>
+          <li>企業様向け</li>
+          <li>CONTACT</li>
         </ul>
       <% end %>
     </div>
   </header>
-  
+
   <div class="alerts">
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
