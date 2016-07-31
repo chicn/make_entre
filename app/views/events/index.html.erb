@@ -68,22 +68,6 @@
     </div>
 
     <script>
-
-    function kakunin(btnNo){
-      if (btnNo == 1){
-        link = "Yahoo!Japan";
-        href = "http://www.yahoo.co.jp/";
-      }else{
-        link = "Google";
-        href = "http://www.google.co.jp/";
-      }
-
-      ret = confirm("参加申請をします。宜しいですか？");
-      if (ret == true){
-        location.href = href;
-      }
-    }
-
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         nextButton: '.swiper-button-next',
@@ -109,8 +93,8 @@
               <h3><%= event.name %></h3>
               <p><%= event.place %><br>
                 <%= event.date %><br></p>
-              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post, data: {confirm: "本当に参加しますか？"} %> 
-              <%= link_to '詳細', event, class: "btn btn-default" %></p>
+              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post %> 
+              <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
             </div>
           </div>
         </div>
